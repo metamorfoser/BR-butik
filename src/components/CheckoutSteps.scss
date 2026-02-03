@@ -1,0 +1,65 @@
+@use "../styles/index" as *;
+
+.checkout-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin: 30px 0;
+  position: relative;
+  padding: 0 20px;
+}
+
+/* Baslinje */
+.checkout-steps::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 22%;
+  right: 22%;
+  height: 2px;
+  background: $gray;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* Progress-linje */
+.checkout-steps::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 22%;
+  height: 2px;
+  background: $dark-green;
+  z-index: 1;
+  width: calc((56%) * ((var(--step) - 1) / 2));
+  transition: width 0.3s ease;
+}
+
+/* Steg */
+.step {
+  position: relative;
+  z-index: 2;
+  background: $offwhite;
+  padding: 4px 16px;
+  border-radius: 6px;
+  font-size: 20px;
+  color: $gray;
+  opacity: 0.7;
+  transition: 0.2s ease;
+}
+
+/* Aktivt steg */
+.step.active {
+  color: $dark-green;
+  opacity: 1;
+  font-weight: bold;
+  font-size: 32px;
+  transform: scale(1.1);
+}
+
+/* Passerat steg */
+.step.done {
+  color: $dark-green;
+  opacity: 1;
+}

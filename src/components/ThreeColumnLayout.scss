@@ -1,0 +1,38 @@
+@use "../styles/index" as *;
+
+.three-column-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr 260px;
+  gap: 60px;
+  padding: 40px 40px;
+  padding-right: 80px;
+  margin-top: 0;
+  align-items: start;
+}
+
+.left-column,
+.right-column {
+  position: sticky;
+  top: 180px;
+  height: fit-content;
+}
+
+.right-column .sidebar-product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+
+.right-column .sidebar-product-card {
+  padding: 30px;
+}
+
+.right-column .sidebar-product-card h3 {
+  font-size: 17px;
+}
+
+.right-column .sidebar-product-card p {
+  font-size: 15px;
+}

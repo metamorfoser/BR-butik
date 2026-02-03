@@ -1,0 +1,28 @@
+@use "sass:color";
+@use "./variables" as *;
+
+body {
+  margin: 0;
+  background: $offwhite;
+  color: $dark-green;
+  padding-top: 100px; // justerad efter headerns höjd
+}
+
+button {
+background: color.adjust($dark-green, $lightness: -8%);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: $radius;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: darken($dark-green, 8%);
+  }
+}
+
+a {
+  color: $dark-green;
+  text-decoration: none;
+}

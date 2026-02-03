@@ -1,0 +1,61 @@
+@use "../styles/index" as *;
+
+ /* ADD-TO-CART POPUP */
+
+.popup {
+  position: fixed;
+  top: 72px;   
+  right: 135px;    
+  z-index: 999999;
+
+  background: white;
+  color: $dark-green;
+
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 0.5px solid $dark-green;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+
+  max-width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 15px;
+  pointer-events: none;
+  opacity: 0;
+  animation: fadeSlide 3s ease forwards;
+}
+
+ /*   ANIMATION */
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  12% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+/*  MOBILANPASSNING */
+
+@media (max-width: 600px) {
+  .popup {
+    top: 70px;
+    right: 16px;
+    max-width: 200px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}

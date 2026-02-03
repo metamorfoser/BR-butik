@@ -1,0 +1,51 @@
+@use "../styles/index" as *;
+
+.sidebar-product-list {
+  text-align: center;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 300;
+    color: $dark-green;
+    margin-bottom: 20px;
+  }
+}
+
+.sidebar-product-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sidebar-product-card {
+  background: white;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid $dark-green;
+  text-decoration: none;
+  color: $dark-green;
+  transition: 0.25s ease;
+
+  img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+
+  &:hover {
+    background: $beige;
+    transform: translateY(-3px);
+  }
+
+  h3 {
+    font-size: 15px;
+    margin: 4px 0;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
