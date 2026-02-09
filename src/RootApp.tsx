@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useCart } from "./context/useCart";
 
 import { Header } from "./components/Header";
@@ -14,19 +14,18 @@ export function RootApp() {
   const { popup } = useCart();
 
   return (
-    <BrowserRouter basename="/BR-butik">
+    <>
       <Header />
-
-      <Routes>
-        <Route path="/" element={<ProductsPage />} />
-        <Route path="butik" element={<ProductsPage />} />
-        <Route path="products/:id" element={<ProductDetailsPage />} />
-        <Route path="cart" element={<CartPage />} />
-        <Route path="checkout" element={<CheckoutPage />} />
-        <Route path="order-confirmation" element={<OrderConfirmationPage />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<ProductsPage />} />
+          <Route path="butik" element={<ProductsPage />} />
+          <Route path="products/:id" element={<ProductDetailsPage />} />
+          <Route path="cart" element={<CartPage />} />
+          <Route path="checkout" element={<CheckoutPage />} />
+          <Route path="order-confirmation" element={<OrderConfirmationPage />} />
+        </Routes>
 
       {popup && <AddToCartPopup title={popup} />}
-    </BrowserRouter>
+    </>
   );
 }

@@ -101,9 +101,8 @@ const fixedGiftProducts = [
           <div className="cart-title-row">
             <CheckoutSteps step={1} />
           </div>
-
             {cart.length > 0 && (
-              <Link to="checkout" className="checkout-btn-top">
+              <Link to="/checkout" className="checkout-btn checkout-btn-top">
                 Gå till kassan
               </Link>
             )}
@@ -141,7 +140,7 @@ const fixedGiftProducts = [
           {cart.length > 0 && (
             <div className="cart-summary-box">
               <p className="total">Totalt: {total} kr</p>
-              <Link to="checkout" className="checkout-btn">
+              <Link to="/checkout" className="checkout-btn">
                 Gå till kassan
               </Link>
             </div>

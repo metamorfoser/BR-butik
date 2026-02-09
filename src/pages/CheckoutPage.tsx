@@ -103,7 +103,7 @@ export function CheckoutPage() {
             </label>
           </div>
 
-          <Link to="order-confirmation" className="place-order-btn">
+          <Link to="/order-confirmation" className="place-order-btn">
             Slutför köp
           </Link>
         </div>
