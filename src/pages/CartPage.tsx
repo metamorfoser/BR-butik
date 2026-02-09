@@ -5,6 +5,7 @@ import { SidebarProductList } from "../components/SidebarProductList";
 import { useEffect, useState } from "react";
 import "./CartPage.scss";
 import CheckoutSteps from "../components/CheckoutSteps";
+import { Link } from "react-router-dom";
 
 import PresentkortImg from "../assets/presentkort.png";
 import KlippkortImg from "../assets/Massage1-scaled-300x300.jpg";
@@ -101,11 +102,11 @@ const fixedGiftProducts = [
             <CheckoutSteps step={1} />
           </div>
 
-          {cart.length > 0 && (
-            <a href="/checkout" className="checkout-btn-top">
-              Gå till kassan
-            </a>
-          )}
+            {cart.length > 0 && (
+              <Link to="checkout" className="checkout-btn-top">
+                Gå till kassan
+              </Link>
+            )}
 
           <div className="cart-list">
             {cart.length === 0 && <p>Din varukorg är tom.</p>}
@@ -140,9 +141,9 @@ const fixedGiftProducts = [
           {cart.length > 0 && (
             <div className="cart-summary-box">
               <p className="total">Totalt: {total} kr</p>
-              <a href="/checkout" className="checkout-btn">
+              <Link to="checkout" className="checkout-btn">
                 Gå till kassan
-              </a>
+              </Link>
             </div>
           )}
         </div>

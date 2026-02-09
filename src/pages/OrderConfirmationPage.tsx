@@ -3,6 +3,7 @@ import { ThreeColumnLayout } from "../components/ThreeColumnLayout";
 import CheckoutSteps from "../components/CheckoutSteps";
 import { useEffect, useState } from "react";
 import "./OrderConfirmationPage.scss";
+import { Link } from "react-router-dom";
 
 const GENERATED_ORDER_NUMBER = Math.floor(Math.random() * 900000 + 100000);
 
@@ -46,9 +47,9 @@ export function OrderConfirmationPage() {
                 </div>
               </div>
 
-              <a href="/" className="continue-btn" onClick={clearCart}>
+              <Link to="/" className="continue-btn" onClick={clearCart}>
                 Fortsätt handla
-              </a>
+              </Link>
             </div>
           </div>
         </div>

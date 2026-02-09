@@ -22,18 +22,18 @@ export function Header() {
       {/* Mitten: meny */}
       <nav className="header-center">
         <Link to="/">Hem</Link>
-        <Link to="/behandlingar">Behandlingar</Link>
-        <Link to="/firanden">Firanden</Link>
-        <Link to="/infor-brollopet">Inför bröllopet</Link>
-        <Link to="/om-oss">Om oss</Link>
-        <Link to="/butik">Butik</Link>
+        <Link to="behandlingar">Behandlingar</Link>
+        <Link to="firanden">Firanden</Link>
+        <Link to="infor-brollopet">Inför bröllopet</Link>
+        <Link to="om-oss">Om oss</Link>
+        <Link to="butik">Butik</Link>
       </nav>
 
       {/* Höger: shoppingbag och checkout */}
       <div className="header-right">
 
         {/* Shoppingbag och Varukorg */}
-        <Link to="/cart" className="bag-wrapper">
+        <Link to="cart" className="bag-wrapper">
           <span className="bag-icon">🛍️</span>
           {totalQuantity > 0 && (
             <span className="badge">{totalQuantity}</span>
@@ -41,7 +41,7 @@ export function Header() {
         </Link>
 
         {/* Summa och kundvagn till Checkout */}
-        <Link to="/checkout" className="checkout-wrapper">
+        <Link to="checkout" className="checkout-wrapper">
           <span className="cart-summary">{totalPrice} kr</span>
           <span className="checkout-icon">🛒</span>
         </Link>

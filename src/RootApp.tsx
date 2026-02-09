@@ -16,15 +16,14 @@ export function RootApp() {
   return (
     <>
       <Header />
-
-      <Routes>
-        <Route path="/" element={<ProductsPage />} />
-        <Route path="/butik" element={<ProductsPage />} />
-        <Route path="/products/:id" element={<ProductDetailsPage />} />
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="/order-confirmation" element={<OrderConfirmationPage />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<ProductsPage />} />
+          <Route path="butik" element={<ProductsPage />} />
+          <Route path="products/:id" element={<ProductDetailsPage />} />
+          <Route path="cart" element={<CartPage />} />
+          <Route path="checkout" element={<CheckoutPage />} />
+          <Route path="order-confirmation" element={<OrderConfirmationPage />} />
+        </Routes>
 
       {popup && <AddToCartPopup title={popup} />}
     </>

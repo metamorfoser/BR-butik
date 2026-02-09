@@ -10,7 +10,7 @@ import { RootApp } from "./RootApp";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <CartProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/BR-butik">
         <RootApp />
       </BrowserRouter>
     </CartProvider>

@@ -6,6 +6,7 @@ import type { ShopProduct } from "../types/ShopProduct";
 import "./CheckoutPage.scss";
 import Hotstone from "../assets/Hotstone.png";
 import CheckoutSteps from "../components/CheckoutSteps";
+import { Link } from "react-router-dom";
 
 export function CheckoutPage() {
   const { cart, getTotal } = useCart();
@@ -102,9 +103,9 @@ export function CheckoutPage() {
             </label>
           </div>
 
-          <a href="/order-confirmation" className="place-order-btn">
+          <Link to="order-confirmation" className="place-order-btn">
             Slutför köp
-          </a>
+          </Link>
         </div>
       }
       right={
